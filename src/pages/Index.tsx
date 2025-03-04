@@ -1,11 +1,10 @@
-
-import NavBar from '@/components/NavBar';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import Transition from '@/components/Transition';
+import NavBar from "@/components/NavBar";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Transition from "@/components/Transition";
 import { Code, Headphones, Package } from 'lucide-react';
 
 const Index = () => {
