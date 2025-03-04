@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #101820;
+    --foreground: #FEE715;
+    --foreground: #FEE715;
+    --card: #FEE715;
+    --card-foreground: #ebdd4e;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+ 
+    --popover: #FEE715;
+    --popover-foreground: #ebdd4e;
+    --popover-foreground: 240 10% 3.9%;
+ 
+    --primary: #FEE715;
+    --primary-foreground: #ebdd4e;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: #FEE715;
+    --secondary-foreground: #ebdd4e;
+    --secondary-foreground: 240 5.9% 10%;
+ 
+    --muted: #FEE715;
+    --muted-foreground: #ebdd4e;
+    --muted-foreground: 240 3.8% 46.1%;
+ 
+    --accent: #FEE715;
+    --accent-foreground: #ebdd4e;
+    --accent-foreground: 240 5.9% 10%;
+ 
+    --destructive: #FEE715;
+    --destructive-foreground: #ebdd4e;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: #FEE715;
+    --input: #FEE715;
+    --ring: #FEE715;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+ 
+    --radius: 0.75rem;
+
+    --sidebar-background: #ebdd4e;
+    --sidebar-foreground: #FEE715;
+    --sidebar-primary: #FEE715;
+    --sidebar-primary-foreground: #ebdd4e;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: #FEE715;
+    --sidebar-accent-foreground: #ebdd4e;
+    --sidebar-border: #FEE715;
+    --sidebar-ring: #FEE715;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply text-3xl md:text-4xl font-bold tracking-tight mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-xl font-medium mb-8 text-muted-foreground;
+  }
+  
+  .glass-panel {
+    @apply bg-background/60 backdrop-blur-md border border-border/60 rounded-lg shadow-sm;
+  }
+  
+  /* Spotlight effect */
+  .spotlight {
+    @apply absolute pointer-events-none inset-0 z-[-1] bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 transition-opacity duration-500 ease-in-out data-[active=true]:opacity-100;
+  }
+  
+  /* Link underline animation */
+  .link-underline {
+    @apply relative inline-block after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+  
+  /* Card hover animation */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+  
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-24;
+  }
+}
